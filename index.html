@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Smart Home Dashboard</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body onload="renderTime();">
+	<div class="dashboardAppWrapper"> <!-- beginWrapper -->
+		<div class="dashboardAppContent"> <!-- beginContent -->
+			<div class="dashboardAppHeader"> <!-- beginHeader -->
+				<div class="appHeader">
+					<div class="container">
+						
+					<div class="appHeader__nav">
+					<div class="appHeader__title">
+						Smart Home Dashboard
+					</div>
+						
+					</div>
+					</div>
+				</div>
+			</div> <!-- endHeader -->
+			<div class="dashboardAppInner">
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 block">
+							<div class="weather">
+								<div class="weather__title">
+									Weather
+								</div>
+
+								<div class="weather__notification">
+									<p> </p>
+								</div>
+								<div class="weather__container">
+							<div class="weather__icon">
+								<img src="icons/unknown.png" alt="" style="height: 128px; width: 150px">
+							</div>
+							<div class="weather__tempValue">
+								- °<span>c</span>
+							</div>
+							<div class="weather__tempDescription">
+								-
+							</div>
+							<div class="weather__location">
+								-
+							</div>
+						</div>
+
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 block appClock">
+							<div id="clock">
+								<h2>The time is now</h2>
+								<div id="currentDate">
+		
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 block">
+							<h2>User</h2>
+							<div>
+								<h1 id="username" onclick="change_name()">[CLICk]</h1>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 switch">
+							<section>
+								<h1>Lamp</h1>
+							<ul>
+								<li>
+									<span>ON</span>
+									<span>OFF</span>
+								</li>
+							</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- endContent -->
+
+		<div class="dashboardAppFooter"> <!-- beginFooter -->	
+			Disignet by Kariman Mardaliev<br>
+			<span>© Copyright 2019-2020. All Rights Reserved.</span>
+		</div>	<!-- endFooter -->
+	</div> <!-- endWrapper -->	
+<!-- 	<script type="text/javascript">
+		function clock(){ 
+
+			var hours = document.getElementById('hour');
+			var minutes = document.getElementById('minutes');
+			var seconds = document.getElementById('seconds');
+
+
+			var h = new Date().getHours();
+			var m = new Date().getMinutes();
+			var s = new Date().getSeconds();
+
+			hours.innerHTML = h;
+			minutes.innerHTML = m;
+			seconds.innerHTML = s;
+		}
+
+		var interval = setInterval(clock, 1000);
+		clock();
+	</script> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('ul').click(function(){
+				$('ul').toggleClass('active')
+				$('section').toggleClass('dark')
+			});
+		});
+	</script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
